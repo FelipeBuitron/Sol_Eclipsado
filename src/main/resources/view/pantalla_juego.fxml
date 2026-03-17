@@ -1,0 +1,14 @@
+<VBox spacing="20" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.java.controller.PantallaJuegoController">
+
+    <Label text="Juego Sol Eclipsado"/>
+
+    <HBox fx:id="contenedorLetras" spacing="10" alignment="CENTER"/>
+
+    <Button text="Ayuda" fx:id="botonAyuda"/>
+
+    <ImageView fx:id="imagenSol" fitHeight="150" fitWidth="150"/>
+
+</VBox>
