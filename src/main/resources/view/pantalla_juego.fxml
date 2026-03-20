@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+
 <VBox spacing="20" alignment="CENTER"
       xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
@@ -7,8 +16,10 @@
 
     <HBox fx:id="contenedorLetras" spacing="10" alignment="CENTER"/>
 
-    <Button text="Ayuda" fx:id="botonAyuda"/>
+    <Button text="Ayuda" fx:id="botonAyuda" onAction="#usarAyuda"/>
 
     <ImageView fx:id="imagenSol" fitHeight="150" fitWidth="150"/>
+
+    <TextField fx:id="campoLetra" promptText="Escribe una letra" onKeyReleased="#escribirLetra"/>
 
 </VBox>

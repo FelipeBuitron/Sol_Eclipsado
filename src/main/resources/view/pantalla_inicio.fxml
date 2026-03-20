@@ -13,6 +13,6 @@
 
     <TextField fx:id="campoPalabra"/>
 
-    <Button text="Jugar" onAction="#jugar"/>
+    <Button text="Jugar" fx:id="botonJugar" onAction="#jugar"/>
 
 </VBox>
