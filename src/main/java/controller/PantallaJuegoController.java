@@ -5,6 +5,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import main.java.model.Juego;
@@ -26,6 +27,8 @@ public class PantallaJuegoController {
     private Juego juego;
     private int posicionActual = 0;
 
+    private final int MAX_ERRORES = 5;
+
     @FXML
     private void escribirLetra() {
 
@@ -43,12 +46,22 @@ public class PantallaJuegoController {
                 letraLabel.setText(String.valueOf(letra));
 
                 posicionActual++;
-                System.out.println("Letra correcta");
+
+                // 🔥 VERIFICAR SI GANÓ
+                if (posicionActual == juego.getPalabraSecreta().length()) {
+                    mostrarMensaje("¡Ganaste!");
+                    bloquearJuego();
+                }
 
             } else {
 
                 actualizarSol(juego.getErrores());
-                System.out.println("Letra incorrecta");
+
+                // 🔥 VERIFICAR SI PERDIÓ
+                if (juego.getErrores() >= MAX_ERRORES) {
+                    mostrarMensaje("Perdiste \nLa palabra era: " + juego.getPalabraSecreta());
+                    bloquearJuego();
+                }
             }
 
             campoLetra.clear();
@@ -59,7 +72,7 @@ public class PantallaJuegoController {
 
         juego = new Juego(palabra);
 
-        System.out.println("Juego iniciado con palabra: " + palabra);
+        posicionActual = 0;
 
         actualizarSol(0);
 
@@ -86,23 +99,31 @@ public class PantallaJuegoController {
 
         if (posicion != -1) {
 
-            // Obtener la letra correcta
             char letraCorrecta = juego.getPalabraSecreta().charAt(posicion);
 
-            // Mostrarla en pantalla
             Label letraLabel = (Label) contenedorLetras.getChildren().get(posicion);
             letraLabel.setText(String.valueOf(letraCorrecta));
 
-            // Si la ayuda es justo en la posición actual, avanzamos
             if (posicion == posicionActual) {
                 posicionActual++;
             }
 
-            System.out.println("Ayuda usada en posición: " + posicion);
-
         } else {
-            System.out.println("No tienes más ayudas 😢");
             botonAyuda.setDisable(true);
         }
+    }
+
+    // 🔥 MOSTRAR MENSAJE
+    private void mostrarMensaje(String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
+    }
+
+    // 🔥 BLOQUEAR EL JUEGO
+    private void bloquearJuego() {
+        campoLetra.setDisable(true);
+        botonAyuda.setDisable(true);
     }
 }
