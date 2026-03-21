@@ -9,10 +9,21 @@ import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 import main.java.model.ValidadorPalabra;
 
-
+/**
+ * CLASE DE LA PANNTALLA DE INICIO DEL JUEGO
+ * Permite al usuario ingresar una palabra secreta y validarla antes de iniciar el juego
+ *
+ * @author Andrés Felipe Escobar
+ * @author Carlos Enrique Delgado
+ * @version 1.0
+ */
 
 public class PantallaInicio {
 
+    /**
+     * Muestra la ventana de inicio del juego.
+     * @param stage (Ventana principal donde se carga la interfaz)
+     */
     public void mostrar(Stage stage){
 
         Label titulo = new Label("SOL ECLIPSADO");
@@ -26,7 +37,7 @@ public class PantallaInicio {
         botonJugar.setOnAction(e -> {
 
             String palabra = campoPalabra.getText();
-
+            //Valida la palabra ingresada
             if(!ValidadorPalabra.palabraValida(palabra)){
 
                 Alert alerta = new Alert(Alert.AlertType.ERROR);
@@ -40,16 +51,16 @@ public class PantallaInicio {
 
                 System.out.println("Palabra válida: " + palabra);
 
-                //lllll
-
             }
         });
-
+        //Contenedor principal
         VBox root = new VBox(15);
         root.getChildren().addAll(titulo, instruccion, campoPalabra, botonJugar);
 
+        //Crea la escena
         Scene escena = new Scene(root,800,800);
 
+        //Configura la ventana
         stage.setScene(escena);
         stage.setTitle("Sol Eclipsado");
         stage.show();
