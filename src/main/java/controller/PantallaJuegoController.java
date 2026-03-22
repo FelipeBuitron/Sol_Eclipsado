@@ -102,6 +102,7 @@ public class PantallaJuegoController {
         //Crea guiones por cada letra de la palabra
         for (int i = 0; i < palabra.length(); i++) {
             Label guion = new Label("_");
+            guion.setTextFill(javafx.scene.paint.Color.WHITE);
             guion.setStyle("-fx-font-size: 25px;");
             contenedorLetras.getChildren().add(guion);
         }
