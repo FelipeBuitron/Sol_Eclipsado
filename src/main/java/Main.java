@@ -26,7 +26,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         //Carga el archio FXMLde la pantalla de inicio
         FXMLLoader loader = new FXMLLoader(
-                Main.class.getResource("/main/resources/view/pantalla_inicio.fxml")
+                Main.class.getResource("/main/resources/view/pantalla_instrucciones.fxml")
         );
 
         //Crea la escena con el contenido cargado

@@ -58,10 +58,11 @@ public class PantallaInicioController {
 
                 //Obtiene el controlador de la nueva pantalla
                 PantallaJuegoController controller = loader.getController();
+
                 //Envía la palabra al juego
                 controller.iniciarJuego(palabra);
 
-                //Camia de escena
+                //Cambia de escena
                 Stage stage = (Stage) botonJugar.getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.show();
