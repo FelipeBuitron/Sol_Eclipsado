@@ -14,37 +14,37 @@
 
     <Label text="INSTRUCCIONES: " textFill="#a4a1a1" wrapText="true">
         <font>
-            <Font name="Rockwell Condensed" size="20.0" />
+            <Font name="Rockwell Condensed" size="25.0" />
         </font></Label>
-   <Label text="1. Ingrese la palabra secreta que el jugador debe adivinar. " textFill="WHITE">
+   <Label prefHeight="20.0" prefWidth="470.0" text="1. Ingrese la palabra secreta que el jugador debe adivinar. " textFill="WHITE">
       <font>
-         <Font name="Rockwell Condensed" size="18.0" />
+         <Font name="SansSerif Regular" size="17.0" />
       </font>
    </Label>
-   <Label text="2. Dar click en Jugar. " textFill="WHITE">
+   <Label prefHeight="20.0" prefWidth="466.0" text="2. Dar click en Jugar. " textFill="WHITE">
       <font>
-         <Font name="Rockwell Condensed" size="18.0" />
+         <Font name="SansSerif Regular" size="17.0" />
       </font>
    </Label>
-   <Label text="3. Inicia el juego y adivina letra por letra la palabra secreta. Si hay letras repetidas, debaras adivinar cada una." textAlignment="CENTER" textFill="#f8f5f5" wrapText="true">
+   <Label prefHeight="41.0" prefWidth="469.0" text="3. Inicia el juego y adivina letra por letra la palabra secreta. Si hay letras repetidas, debaras adivinar cada una." textFill="#f8f5f5" wrapText="true">
       <font>
-         <Font name="Rockwell Condensed" size="18.0" />
+         <Font name="SansSerif Regular" size="17.0" />
       </font>
    </Label>
-   <Label text="4. Tienes hasta 5 oportunidades de cometer errores." textFill="WHITE">
+   <Label prefHeight="20.0" prefWidth="467.0" text="4. Tienes hasta 5 oportunidades de cometer errores." textFill="WHITE">
       <font>
-         <Font name="Rockwell Condensed" size="18.0" />
+         <Font name="SansSerif Regular" size="17.0" />
       </font>
    </Label>
-   <Label text="5. Con el botón de &quot;Ayuda&quot; puedes descubrir la siguiente letra de la palabra (solo tienes 3 oportunidades de ayuda)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+   <Label prefHeight="41.0" prefWidth="469.0" text="5. Con el botón de &quot;Ayuda&quot; puedes descubrir la siguiente letra de la palabra (solo tienes 3 oportunidades de ayuda)." textFill="WHITE" wrapText="true">
       <font>
-         <Font name="Rockwell Condensed" size="18.0" />
+         <Font name="SansSerif Regular" size="17.0" />
       </font>
    </Label>
 
-    <Button fx:id="botonContinuar" onAction="#Continuar" text="Continuar">
+    <Button fx:id="botonContinuar" onAction="#Continuar" prefHeight="39.0" prefWidth="108.0" text="Continuar">
         <font>
-            <Font name="Rockwell Condensed" size="16.0" />
+            <Font name="Rockwell Condensed" size="20.0" />
         </font></Button>
 
 </VBox>
