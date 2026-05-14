@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.text.Font;
 
 /**
  * CLASE PRINCIPAL DEL PROGRAMA
@@ -24,7 +25,11 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage stage) throws Exception {
-        //Carga el archio FXMLde la pantalla de inicio
+        //Carga el archivo FXMLde la pantalla de inicio
+
+        Font.loadFont(Main.class.getResourceAsStream("/main/resources/fonts/micross.ttf"), 10);
+        Font.loadFont(Main.class.getResourceAsStream("/main/resources/fonts/Quick Town.otf"), 10);
+        Font.loadFont(Main.class.getResourceAsStream("/main/resources/fonts/ROCCB__TTF"), 10);
         FXMLLoader loader = new FXMLLoader(
                 Main.class.getResource("/main/resources/view/pantalla_instrucciones.fxml")
         );

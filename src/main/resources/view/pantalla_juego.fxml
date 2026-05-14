@@ -32,13 +32,13 @@
       
                             <TextField fx:id="campoLetra" alignment="TOP_CENTER" maxWidth="-Infinity" minHeight="35.0" minWidth="250.0" onKeyReleased="#escribirLetra" prefWidth="100.0" promptText="Escribe una letra" style="-fx-background-color: #f4f6f8; -fx-pref-width: 50;">
             <font>
-               <Font name="Rockwell Condensed" size="19.0" />
+               <Font name="Rockwell Condensed Blod" size="19.0" />
             </font>
          </TextField>
       
                 <Button fx:id="botonAyuda" onAction="#usarAyuda" text="Ayuda">
             <font>
-               <Font name="Rockwell Condensed" size="18.0" />
+               <Font name="Rockwell Condensed Blod" size="18.0" />
             </font>
          </Button>
       

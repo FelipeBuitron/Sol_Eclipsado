@@ -71,7 +71,7 @@ public class PantallaJuegoController {
                 }
 
             } else {
-                //Actualiza la imagen del son segun los errores
+                //Actualiza la imagen del sol segun los errores
                 actualizarSol(juego.getErrores());
 
                 // Verifica si el jugador perdió
@@ -97,7 +97,7 @@ public class PantallaJuegoController {
 
         actualizarSol(0); //Estado inicial del sol
 
-        contenedorLetras.getChildren().clear(); //Limpia el conteneor de letras
+        contenedorLetras.getChildren().clear(); //Limpia el contenedor de letras
 
         //Crea guiones por cada letra de la palabra
         for (int i = 0; i < palabra.length(); i++) {

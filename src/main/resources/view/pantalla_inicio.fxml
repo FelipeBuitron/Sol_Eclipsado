@@ -32,7 +32,7 @@
       
           <Label text="Ingrese la palabra secreta" textFill="WHITE">
             <font>
-               <Font name="Rockwell Condensed" size="29.0" />
+               <Font name="Rockwell Condensed Bold" size="29.0" />
             </font>
          </Label>
       
@@ -40,7 +40,7 @@
       
           <Button fx:id="botonJugar" onAction="#jugar" text="Jugar">
             <font>
-               <Font name="Rockwell Condensed" size="23.0" />
+               <Font name="Rockwell Condensed Bold" size="23.0" />
             </font>
          </Button>
       
