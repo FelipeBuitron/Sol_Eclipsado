@@ -38,7 +38,7 @@
       
                 <Button fx:id="botonAyuda" onAction="#usarAyuda" text="Ayuda">
             <font>
-               <Font name="Rockwell Condensed Blod" size="18.0" />
+               <Font name="Rockwell Condensed Bold" size="18.0" />
             </font>
          </Button>
       

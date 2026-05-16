@@ -39,5 +39,6 @@ public class PantallaJuego {
 
         stage.setScene(escena);
         stage.setTitle("Juego - Sol Eclipsado");
+        stage.show();
     }
 }

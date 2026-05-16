@@ -32,7 +32,7 @@ public class Juego {
         return letrasAdivinadas[posicion];
     }
 
-    // 🔥 Método principal: validar letra en una posición
+    //Método principal: validar letra en una posición
     public boolean verificarLetra(int posicion, char letra) {
 
         letra = normalizar(letra);
@@ -47,7 +47,7 @@ public class Juego {
         }
     }
 
-    // 🔥 Normalizar acentos
+    //Normalizar acentos
     private char normalizar(char c) {
         c = Character.toLowerCase(c);
 
@@ -61,7 +61,7 @@ public class Juego {
         }
     }
 
-    // 🔥 Verificar si ganó
+    //Verificar si ganó
     public boolean juegoGanado() {
         for (boolean letra : letrasAdivinadas) {
             if (!letra) {
@@ -71,12 +71,12 @@ public class Juego {
         return true;
     }
 
-    // 🔥 Verificar si perdió
+    //Verificar si perdió
     public boolean juegoPerdido() {
         return errores >= 5;
     }
 
-    // 🔥 Usar ayuda (revela una letra automáticamente)
+    //Usar ayuda (revela una letra automáticamente)
     public int usarAyuda() {
 
         if (ayudasRestantes > 0) {

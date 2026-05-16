@@ -14,7 +14,7 @@ public class PantallaInstruccionesController {
 
     @FXML
     private void Continuar() throws Exception {
-        //Carga la pantalla de juego
+        //Carga la pantalla de inicio
         FXMLLoader loader = new FXMLLoader(
                 getClass().getClassLoader().getResource("main/resources/view/pantalla_inicio.fxml")
         );

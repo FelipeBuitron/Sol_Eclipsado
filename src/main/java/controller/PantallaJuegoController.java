@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import main.java.model.Juego;
+import java.net.URL;
 
 /**
  * CONTROLADOR DE LA PANTALLA PRINCIPAL DEL JUEGO
@@ -114,8 +115,11 @@ public class PantallaJuegoController {
      */
     private void actualizarSol(int errores) {
 
-        String ruta = "file:D:/JavaProjects/SolEclipsado/src/main/resources/img/sol" + errores + ".png";
-        Image imagen = new Image(ruta);
+        String ruta = "/img/sol" + errores + ".png";
+
+        URL url = getClass().getResource(ruta);
+
+        Image imagen = new Image(url.toExternalForm());
         imagenSol.setImage(imagen);
     }
 

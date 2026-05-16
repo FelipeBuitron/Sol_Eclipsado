@@ -44,7 +44,7 @@
 
     <Button fx:id="botonContinuar" onAction="#Continuar" prefHeight="39.0" prefWidth="108.0" text="Continuar">
         <font>
-            <Font name="Rockwell Condensed Blod" size="15.0" />
+            <Font name="Rockwell Condensed Bold" size="15.0" />
         </font></Button>
 
 </VBox>

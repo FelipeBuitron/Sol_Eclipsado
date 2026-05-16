@@ -43,7 +43,11 @@ public class PantallaInicioController {
             Alert alerta = new Alert(Alert.AlertType.ERROR);
             alerta.setTitle("Error");
             alerta.setHeaderText(null);
-            alerta.setContentText("La palabra ingresada debe ser una sola palabra, sin espacios intermedios ni finales. \nLa palabra debe tener entre 6 y 12 letras.");
+            alerta.setContentText("La palabra debe:\n" +
+                    "- Tener entre 6 y 12 letras\n" +
+                    "- No contener espacios\n" +
+                    "- Ser una sola palabra"
+            );
 
             alerta.showAndWait();
 
